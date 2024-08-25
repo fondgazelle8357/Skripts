@@ -1,0 +1,14 @@
+options:
+	prefix: &6&lESSENTIALS &8|
+
+command clearchat:
+    permission: essentials.clearchat
+    trigger:
+        #I do this to clear the chat for the annoying people with better chat
+        loop 1000 times:
+            set {_clear} to random integer between 1 and 1000
+            broadcast "%{_clear}%"
+        loop 50 times:
+            broadcast " "
+        broadcast "{@prefix} &7Chat has been Cleared by %player%!"
+        play sound "entity.experience_orb.pickup" with volume 0.1 to all players
